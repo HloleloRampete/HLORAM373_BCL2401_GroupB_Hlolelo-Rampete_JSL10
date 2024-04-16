@@ -12,7 +12,7 @@ document.getElementById("solveRoom1").addEventListener("click", () => {
   
   // Room 2
   document.getElementById("solveRoom2").addEventListener("click", () => {
-    const jsConcepts = new Set(['closure', 'scope', 'hoisting', 'prototype']); // added 'prototype' - they are fundamental aspects of OOP.
+    const jsConcepts = new Set(['closure', 'scope', 'hoisting', 'prototype']); // added 'prototype' - they are fundamental aspects of OOP and assists React elements with functionality.
     // 🪲 Bug: What's mssing from JS concepts?
     const reactConcepts = new Set(['components', 'JSX', 'hooks', 'async']);
     // 🪲 Bug: Incorrect function call
