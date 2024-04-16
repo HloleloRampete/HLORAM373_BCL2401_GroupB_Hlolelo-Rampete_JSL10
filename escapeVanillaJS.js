@@ -21,16 +21,19 @@ document.getElementById("solveRoom1").addEventListener("click", () => {
   });
   
   // Room 3
-  // look into this code and make it look like the original 
+  // 🪲 Bug: Asynchronous function ? 
   document.getElementById("solveRoom3").addEventListener("click", async () => {
     try {
+        // fetches the data from 'directions.json'
       const response = await fetch('directions.json');
       const directions = await response.json();
+      // Navigate the labyrinth using the 'navigateLabyrinth' function
       const message = await navigateLabyrinth(directions);
-      document.getElementById("room3Result").textContent = message;
+      // 🪲 Bug: Incorrect method
+      document.getElementById("room3Result").textContent = message; // update the HTML textcontent of 'room3Result' with the value of 'message'
     } catch (error) {
-      console.error("Error navigating labyrinth:", error);
-      // Handle the error gracefully, e.g., display an error message to the user
+      console.error("Error navigating labyrinth:", error); // checking for error
+      
     }
   });
   
