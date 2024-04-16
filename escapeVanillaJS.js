@@ -58,7 +58,7 @@ document.getElementById("solveRoom1").addEventListener("click", () => {
   async function navigateLabyrinth(directions) {
     for (let direction of directions) {
          // 🪲 Bug: No delay
-      await new Promise(resolve => setTimeout(resolve, 1000)); // Introduce a 1-second delay
+      await new Promise(resolve => setTimeout(resolve, 1000)); // used 'await' with a 'Promise' object so that the 'navigateLabyrinth' function pauses execution for 1s.
       console.log(`Navigating: ${direction.step}`);
     }
     return "Congratulations! You've mastered the essentials of Vanilla JavaScript. Welcome to the world of React, where you'll build powerful and dynamic web applications. Let's dive in!";
