@@ -43,10 +43,10 @@ document.getElementById("solveRoom1").addEventListener("click", () => {
   
   function findIntersection(setA, setB) {
     // 🪲 Bug: Incorrect logic
-    const intersection = new Set();
-    for (const value of setA) { // why is this for loop inserted
-      if (setB.has(value)) { // why is this if statement inserted 
-        intersection.add(value);
+    const intersection = new Set();  // sets holds the elements that are common in 'setA' and 'setB'.
+    for (const value of setA) { // iterating over each element 'value' in 'setA'.
+      if (setB.has(value)) { // checking if current element 'value' from 'setA' also exists in 'setB' (using the built-in 'has' method).
+        intersection.add(value); // if element exists in both sets and it returns true, the 'value' is added to the 'interection' set 
       }
     }
     return intersection;
