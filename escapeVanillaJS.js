@@ -1,41 +1,43 @@
-document.getElementById("solveRoom1").addEventListener("click", () => {
-    // Room 1
-    // 🪲 Bug: Incorrect ID used for attaching the event listener
-    fetch('books.json')
-      .then(response => response.json())
-      .then(books => {
-        const mostRecentBook = findMostRecentBook(books);
-         // 🪲 Bug: Incorrect element ID
-        document.getElementById("room1Result").textContent = `The key to the next room is: ${mostRecentBook.title}`;
-      });
-  });
-  
-  // Room 2
-  document.getElementById("solveRoom2").addEventListener("click", () => {
-    const jsConcepts = new Set(['closure', 'scope', 'hoisting', 'prototype']); // added 'prototype' - they are fundamental aspects of OOP and assists React elements with functionality.
-    // 🪲 Bug: What's mssing from JS concepts?
-    const reactConcepts = new Set(['components', 'JSX', 'hooks', 'async']);
-    // 🪲 Bug: Incorrect function call
-    const commonConcepts = findIntersection(jsConcepts, reactConcepts); // finding the intersection between JS and React concepts.
-    document.getElementById("room2Result").textContent = `The code to unlock the door is: ${Array.from(commonConcepts).join(', ')}`;
-  });
-  
-  // Room 3
-  // 🪲 Bug: Asynchronous function ? 
-  document.getElementById("solveRoom3").addEventListener("click", async () => {
-    try {
-        // fetches the data from 'directions.json'
-      const response = await fetch('directions.json');
-      const directions = await response.json();
-      // Navigate the labyrinth using the 'navigateLabyrinth' function
-      const message = await navigateLabyrinth(directions);
-      // 🪲 Bug: Incorrect method
-      document.getElementById("room3Result").textContent = message; // update the HTML textcontent of 'room3Result' with the value of 'message'
-    } catch (error) {
-      console.error("Error navigating labyrinth:", error); // checking for error
-      
-    }
-  });
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("solveRoom1").addEventListener("click", () => {
+      // Room 1
+      // 🪲 Bug: Incorrect ID used for attaching the event listener
+      fetch('books.json')
+        .then(response => response.json())
+        .then(books => {
+          const mostRecentBook = findMostRecentBook(books);
+          // 🪲 Bug: Incorrect element ID
+          document.getElementById("room1Result").textContent = `The key to the next room is: ${mostRecentBook.title}`;
+        });
+    });
+    
+    // Room 2
+    document.getElementById("solveRoom2").addEventListener("click", () => {
+      const jsConcepts = new Set(['closure', 'scope', 'hoisting', 'prototype']); // added 'prototype' - they are fundamental aspects of OOP and assists React elements with functionality.
+      // 🪲 Bug: What's mssing from JS concepts?
+      const reactConcepts = new Set(['components', 'JSX', 'hooks', 'async']);
+      // 🪲 Bug: Incorrect function call
+      const commonConcepts = findIntersection(jsConcepts, reactConcepts); // finding the intersection between JS and React concepts.
+      document.getElementById("room2Result").textContent = `The code to unlock the door is: ${Array.from(commonConcepts).join(', ')}`;
+    });
+    
+    // Room 3
+    // 🪲 Bug: Asynchronous function ? 
+    document.getElementById("solveRoom3").addEventListener("click", async () => {
+      try {
+          // fetches the data from 'directions.json'
+        const response = await fetch('directions.json');
+        const directions = await response.json();
+        // Navigate the labyrinth using the 'navigateLabyrinth' function
+        const message = await navigateLabyrinth(directions);
+        // 🪲 Bug: Incorrect method
+        document.getElementById("room3Result").textContent = message; // update the HTML textcontent of 'room3Result' with the value of 'message'
+      } catch (error) {
+        console.error("Error navigating labyrinth:", error); // checking for error
+        
+      }
+    });
+});
   
   // Finding the most recent book using the reduce function method
   function findMostRecentBook(books) {
