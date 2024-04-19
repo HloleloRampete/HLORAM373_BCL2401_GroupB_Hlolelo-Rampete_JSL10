@@ -3,7 +3,7 @@
 **Escape Vanilla JS Challenge**
 
 **Overview:**
-The Escape Vanilla JS Challenge is an interactive web-based project designed to enhance debugging skills, problem-solving abilities, and understanding of abstraction in JavaScript. The challenge consists of three themed "rooms," each presenting a unique debugging challenge. Successfully navigating through these rooms requires identifying and correcting JavaScript code errors to progress towards learning React.
+The Escape Vanilla JS Challenge is an interactive web-based project designed to enhance debugging skills, problem-solving abilities, and understanding of abstraction in JavaScript. The challenge consists of three themed "rooms," each presenting a unique debugging challenge. Successfully navigating through these rooms required me to identify and correct JavaScript code errors to progress towards learning React.
 
 **Rooms:**
 
@@ -26,9 +26,9 @@ Debugging the Escape Vanilla JS Challenge provided valuable experience in identi
 The challenge highlighted the importance of understanding asynchronous operations in JavaScript. Adding the `async` keyword before functions and utilizing `await` when handling promises ensured proper execution order and prevented unexpected behavior.
 
 **Terminal Usage:**
-Learning and using the terminal is essential for efficient development workflows. It provides access to powerful commands for tasks such as file navigation, version control, and running scripts. Incorporating terminal usage into development practices enhances productivity and facilitates seamless project management.
+Learning and using the terminal is essential for efficient development workflows. It provides access to powerful commands for tasks such as file navigation, version control, and running scripts. Incorporating terminal usage into my development practices will surely enhance my productivity and facilitates seamless project management.
 
-In conclusion, the Escape Vanilla JS Challenge serves as an engaging and practical way to enhance JavaScript skills and prepare for learning React. By mastering debugging techniques, understanding asynchronous operations, and embracing terminal usage, developers can embark on a journey towards becoming proficient in modern web development technologies.
+In conclusion, the Escape Vanilla JS Challenge serves as an engaging and practical way to enhance JavaScript skills and prepare for learning React. By mastering debugging techniques, understanding asynchronous operations, and embracing terminal usage, I can embark on a journey towards becoming proficient in modern web development technologies.
 
 
 
